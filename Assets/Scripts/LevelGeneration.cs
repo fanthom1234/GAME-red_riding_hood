@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class LevelGeneration : MonoBehaviour
 {
+    //// PLAYER
+    public GameObject player;
     //// ARRAYzz_420_69Xxx
     public Transform[] startingPositions;
     public GameObject[] rooms; //index 0 -> LR, index 1 -> LRB, index 2 -> LRT, index 3 -> LRTB
+    //// OBJ
+    public GameObject obelisk;
     //// MOVING
     private int direction; //next move, maybe try enum for ++readability
     public float moveAmount;
@@ -22,12 +26,19 @@ public class LevelGeneration : MonoBehaviour
     public LayerMask room;
     //// Check double down
     private int downCounter = 0;
+    //// PLATFORM GANGGGGANGAG
+    public GameObject[] platform;
+
 
     private void Start()
     {
         int rand = Random.Range(0, startingPositions.Length);
         transform.position = startingPositions[rand].position; //cuz array already is transform lmao
         Instantiate(rooms[0], transform.position, Quaternion.identity);
+        //instantiate platform and playter
+        int randPlat = Random.Range(0, platform.Length);
+        Instantiate(platform[randPlat], new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+        Instantiate(player, new Vector3(transform.position.x, transform.position.y + 2, 0), Quaternion.identity);
 
         direction = Random.Range(1, 6);
     }
@@ -103,6 +114,7 @@ public class LevelGeneration : MonoBehaviour
                     if (downCounter >= 2) {
                         roomDetection.GetComponent<RoomType>().RoomDestruction();
                         Instantiate(rooms[3], transform.position, Quaternion.identity);
+                        //byebye center collider, that we use above
                     } else { ////NORMAL down eiei
                         roomDetection.GetComponent<RoomType>().RoomDestruction();
 
@@ -113,25 +125,28 @@ public class LevelGeneration : MonoBehaviour
                             randBott = 1; //LRB
                         }
                         Instantiate(rooms[randBott], transform.position, Quaternion.identity); //ใช้ได้เพราะยังไม่ได้กำหนดnew position
+                        ////Del coll
                     }
                     
                     
                 }
-
                 Vector2 newPos = new Vector2(transform.position.x, transform.position.y - moveAmount);
                 transform.position = newPos;
 
                 //draw room with top, which is 2 and 3
                 int rand = Random.Range(2, 4);
                 Instantiate(rooms[rand], transform.position, Quaternion.identity);
-
-
+                
                 //theres no direction up, so rand all
                 direction = Random.Range(1, 6);
             } else {
-                //STOP LEVEL GEN
+                //instantiate obelisk
+                Vector3 newPos = new Vector3(transform.position.x + 2.5f, transform.position.y - 4f, 0);
+                Instantiate(obelisk, newPos, Quaternion.identity);
+
                 stopGeneration = true;
-            }
+                //STOP LEVEL GEN
+            }   
         }
     }
 }

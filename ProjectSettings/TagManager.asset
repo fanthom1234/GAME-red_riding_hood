@@ -15,6 +15,12 @@ TagManager:
   - 
   - Room
   - Player
+  - Enemy
+  - Floor
+  - GOD
+  - door
+  - AttackPoint
+  - merchant
   - 
   - 
   - 
@@ -27,17 +33,17 @@ TagManager:
   - 
   - 
   - 
+  - PostProcessing
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - RoomTile
+  - Border
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BG_unlit
+    uniqueID: 1942847037
+    locked: 0
+  - name: Player
+    uniqueID: 1978648631
     locked: 0

@@ -1,20 +1,42 @@
 fileFormatVersion: 2
 guid: 3fb81d7f63b0b89438a4da2a0fea480f
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Idle (78x58)_0
-    21300002: Idle (78x58)_1
-    21300004: Idle (78x58)_2
-    21300006: Idle (78x58)_4
-    21300008: Idle (78x58)_5
-    21300010: Idle (78x58)_6
-    21300012: Idle (78x58)_7
-    21300014: Idle (78x58)_9
-    21300016: Idle (78x58)_10
-    21300018: Idle (78x58)_11
-    21300020: Idle (78x58)_8
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Idle (78x58)_0
+  - first:
+      213: 21300002
+    second: Idle (78x58)_1
+  - first:
+      213: 21300004
+    second: Idle (78x58)_2
+  - first:
+      213: 21300006
+    second: Idle (78x58)_4
+  - first:
+      213: 21300008
+    second: Idle (78x58)_5
+  - first:
+      213: 21300010
+    second: Idle (78x58)_6
+  - first:
+      213: 21300012
+    second: Idle (78x58)_7
+  - first:
+      213: 21300014
+    second: Idle (78x58)_9
+  - first:
+      213: 21300016
+    second: Idle (78x58)_10
+  - first:
+      213: 21300018
+    second: Idle (78x58)_11
+  - first:
+      213: 21300020
+    second: Idle (78x58)_8
   externalObjects: {}
-  serializedVersion: 9
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -34,6 +56,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -43,8 +66,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -56,7 +79,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 15
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -65,11 +88,15 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -80,7 +107,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -91,7 +119,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -102,7 +131,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -113,6 +143,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -132,6 +163,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 20b8acc92f271d04fbd7cc1c2b6e5983
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -152,6 +184,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: ff19df4ebda24ea4b846199aa219b8d4
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -172,6 +205,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: fef84d86df4c7c74a9555856146c4993
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
@@ -192,6 +226,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: a517c9a77bc397e4fa84b4581ccb1f7e
+      internalID: 21300006
       vertices: []
       indices: 
       edges: []
@@ -212,6 +247,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 9735ecf6da877ef40b376308ee435d5d
+      internalID: 21300008
       vertices: []
       indices: 
       edges: []
@@ -232,6 +268,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 97c02d02a80e90c4db9d8a7254fc94f6
+      internalID: 21300010
       vertices: []
       indices: 
       edges: []
@@ -252,6 +289,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 38965e91ad389e445a61feb6d772e85d
+      internalID: 21300012
       vertices: []
       indices: 
       edges: []
@@ -272,6 +310,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: a7cd166e63135ec43be19d59a858237f
+      internalID: 21300014
       vertices: []
       indices: 
       edges: []
@@ -292,6 +331,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 70911e816b914ea45ae092e35f4830b5
+      internalID: 21300016
       vertices: []
       indices: 
       edges: []
@@ -312,6 +352,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e3444f7dea4fab54f9921bbed4f018b3
+      internalID: 21300018
       vertices: []
       indices: 
       edges: []
@@ -332,6 +373,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 8e458bfa275bf694e842cedd83b072a0
+      internalID: 21300020
       vertices: []
       indices: 
       edges: []
@@ -340,10 +382,12 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: fa9c34320d95ae740afcc60594b992c5
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
