@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6574597275587796311}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.55, y: 1.79, z: 0}
+  m_LocalPosition: {x: 0.55, y: 0.691, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 594833273903470909}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 1840228403}
   - component: {fileID: 1840228396}
   - component: {fileID: 1840228397}
-  - component: {fileID: 1840228398}
+  - component: {fileID: 1344189014947807110}
   m_Layer: 9
   m_Name: God_Light
   m_TagString: Untagged
@@ -158,7 +158,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.3333333, y: 2}
+    oldSize: {x: 1.4583334, y: 1.25}
     newSize: {x: 2.3333333, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7332604015766088897}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 904de21ab1f3d4847884e1ebbed3312c, type: 3}
   m_Name: 
@@ -214,6 +214,7 @@ MonoBehaviour:
   attackRange: 1.1
   attackDamage: 100
   attackRate: 50
+  health: 1
   godStand:
     serializedVersion: 2
     m_Bits: 0
@@ -227,15 +228,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7332604015766088897}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37164e52c81a1ce458bdb8d44ef2a4df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 1840228398}
+  controller: {fileID: 0}
   animator: {fileID: 7696533742429563004}
   runSpeed: 50
---- !u!114 &1840228398
+  jump: 0
+--- !u!114 &1344189014947807110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,25 +246,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 7332604015766088897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a5a3d5218d6a145926f13e247e30ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 1967f4f0413b41047a296f6f29b7bf7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 700
-  m_CrouchSpeed: 0.36
-  m_MovementSmoothing: 0.05
-  m_AirControl: 0
-  m_WhatIsGround:
+  speed: 8
+  jumpForce: 12
+  groundCheck: {fileID: 589444854799689850}
+  checkRadius: 0.5
+  whatIsGround:
     serializedVersion: 2
-    m_Bits: 2147487031
-  m_GroundCheck: {fileID: 589444854799689850}
-  m_CeilingCheck: {fileID: 6432260293388624525}
-  m_CrouchDisableCollider: {fileID: 0}
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCrouchEvent:
-    m_PersistentCalls:
-      m_Calls: []
+    m_Bits: 1073741824
+  extraJumpInput: 2
+  key: 273
+  animator: {fileID: 7696533742429563004}
 --- !u!1 &7860109725965188989
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +313,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8396870348024190261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.22, y: 0.1, z: 0}
+  m_LocalPosition: {x: 0.22, y: -0.992, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 594833273903470909}

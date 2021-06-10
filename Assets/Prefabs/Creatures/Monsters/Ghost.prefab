@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1033160101}
   - component: {fileID: 1033160100}
   - component: {fileID: 3464008525321985021}
-  - component: {fileID: 681048690404426166}
   m_Layer: 10
   m_Name: Ghost
   m_TagString: Untagged
@@ -149,21 +148,6 @@ MonoBehaviour:
   maxHealth: 50
   playerAttackPoint: {fileID: 4206080833101886008, guid: 01da8c199ddbf45448a50763214856a6,
     type: 3}
---- !u!114 &681048690404426166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1439714013914874902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e489bd9248ef04f43a716f30501ce5cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  distance: 2
-  groundDetection: {fileID: 2093993123834924130}
 --- !u!1 &6435583368244916503
 GameObject:
   m_ObjectHideFlags: 0

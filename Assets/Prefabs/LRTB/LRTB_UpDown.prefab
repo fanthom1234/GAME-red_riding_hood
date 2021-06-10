@@ -63,6 +63,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   center: {fileID: 8611805826081545997}
+  moveSpeed: 8
+  topPosFromCen: 5
+  bottPosFromCen: 5
 --- !u!1 &6407057814065941607
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,6 +129,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   center: {fileID: 8611805826081545997}
+  moveSpeed: 8
+  topPosFromCen: 6
+  bottPosFromCen: 6
 --- !u!1 &7790209866603100055
 GameObject:
   m_ObjectHideFlags: 0

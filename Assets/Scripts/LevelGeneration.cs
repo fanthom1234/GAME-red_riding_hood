@@ -35,10 +35,13 @@ public class LevelGeneration : MonoBehaviour
         int rand = Random.Range(0, startingPositions.Length);
         transform.position = startingPositions[rand].position; //cuz array already is transform lmao
         Instantiate(rooms[0], transform.position, Quaternion.identity);
-        //instantiate platform and playter
-        int randPlat = Random.Range(0, platform.Length);
-        Instantiate(platform[randPlat], new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
-        Instantiate(player, new Vector3(transform.position.x, transform.position.y + 2, 0), Quaternion.identity);
+        ////instantiate platform and playter
+        //int randPlat = Random.Range(0, platform.Length);
+        //Instantiate(platform[randPlat], new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+        //Instantiate(player, new Vector3(transform.position.x, transform.position.y + 2, 0), Quaternion.identity);
+        //instantiate obelisk
+        Vector3 newPos = new Vector3(transform.position.x + 2.5f, transform.position.y - 4f, 0);
+        Instantiate(obelisk, newPos, Quaternion.identity);
 
         direction = Random.Range(1, 6);
     }
@@ -108,6 +111,7 @@ public class LevelGeneration : MonoBehaviour
                 Collider2D roomDetection = Physics2D.OverlapCircle(transform.position, 1, room);
                 //if it doesn't have bottom opening, BOMB that shjit up fam
                 //THIS GET COMPONENT IS EXPENSIVE RIGHT? maybe fix later
+                //i need some if state to check wether it detect or not, error just keep popping man
                 if (roomDetection.GetComponent<RoomType>().type != 1 && roomDetection.GetComponent<RoomType>().type != 3) {
                     
                     ////make it DOUBLE, TRIPLE down, rooms[3] <-- LRTB
@@ -140,9 +144,9 @@ public class LevelGeneration : MonoBehaviour
                 //theres no direction up, so rand all
                 direction = Random.Range(1, 6);
             } else {
-                //instantiate obelisk
-                Vector3 newPos = new Vector3(transform.position.x + 2.5f, transform.position.y - 4f, 0);
-                Instantiate(obelisk, newPos, Quaternion.identity);
+                int randPlat = Random.Range(0, platform.Length);
+                Instantiate(platform[randPlat], new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+                Instantiate(player, new Vector3(transform.position.x, transform.position.y + 2, 0), Quaternion.identity);
 
                 stopGeneration = true;
                 //STOP LEVEL GEN

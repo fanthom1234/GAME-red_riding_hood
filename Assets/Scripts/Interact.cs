@@ -34,6 +34,14 @@ public class Interact : MonoBehaviour
 
     //private void OnCollisionEnter2D(Collision2D coll)
     //{
+    //    if (coll.gameObject.tag == "door")
+    //    {
+    //        coll.gameObject.GetComponent<OpenDoor>().gotHit();
+    //    }
+    //}
+
+    //private void OnCollisionEnter2D(Collision2D coll)
+    //{
     //    if (coll.gameObject.tag == "merchant")
     //    {
 //
